@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 
 	<build>
-		<finalName>demoJPA</finalName>
+		<finalName>demoDepartamento</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
