@@ -27,7 +27,7 @@
 			<h:outputLabel for="nameProvincia" value="Nombre Provincia "
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="nameProvincia"
+			<p:inputText autocomplete="off" id="NProvincia"
 				styleClass="form-control"
 				value="#{provinciaController.provincia.nprovincia}" maxlength="30"
 				required="true" />
@@ -40,7 +40,7 @@
 				value="#{provinciaController.provincia.departamento}"
 				converter="omnifaces.SelectItemsConverter">
 
-				<f:selectItems value="#{provinciaController.listaDepartamento}"
+				<f:selectItems value="#{provinciaController.listaDepartamentos}"
 					var="m" itemLabel="#{m.ndepartamento}" itemValue="#{m}" />
 			</p:selectOneMenu>
 

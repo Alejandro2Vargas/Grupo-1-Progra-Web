@@ -13,11 +13,10 @@ import pe.edu.upc.entities.Provincia;
 
 public class ProvinciaImpl implements IProvinciaDao {
 
-	@PersistenceContext(unitName = "demoDepartamento")
+	@PersistenceContext(unitName = "ParteDepartamento")
 	private EntityManager em;
 
 	@Transactional
-	@Override
 	public void insert(Provincia p) {
 		// TODO Auto-generated method stub
 
@@ -31,7 +30,6 @@ public class ProvinciaImpl implements IProvinciaDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Provincia> list() {
 		// TODO Auto-generated method stub
 

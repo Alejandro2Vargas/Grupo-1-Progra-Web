@@ -13,13 +13,11 @@ public class DistritoServiceImpl implements IDistritoService {
 	@Inject
 	private IDistritoDao dDao;
 
-	@Override
 	public void insert(Distrito d) {
 		// TODO Auto-generated method stub
 		dDao.insert(d);
 	}
 
-	@Override
 	public List<Distrito> list() {
 		// TODO Auto-generated method stub
 		return dDao.list();

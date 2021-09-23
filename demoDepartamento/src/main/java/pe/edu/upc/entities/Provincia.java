@@ -19,7 +19,7 @@ public class Provincia {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Cprovincia;
 
-	@Column(name = "nameProvincia", length = 50, nullable = false)
+	@Column(name = "Nprovincia", length = 50, nullable = false)
 	private String Nprovincia;
 
 	@ManyToOne
@@ -34,12 +34,18 @@ public class Provincia {
 
 	public Provincia(int cprovincia, String nprovincia, Departamento departamento) {
 		super();
-		this.Cprovincia = cprovincia;
-		this.Nprovincia = nprovincia;
+		Cprovincia = cprovincia;
+		Nprovincia = nprovincia;
 		this.departamento = departamento;
 	}
 
 	// get y set
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(Cprovincia);
+	}
+
 	public int getCprovincia() {
 		return Cprovincia;
 	}
@@ -62,11 +68,6 @@ public class Provincia {
 
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(Cprovincia);
 	}
 
 	@Override

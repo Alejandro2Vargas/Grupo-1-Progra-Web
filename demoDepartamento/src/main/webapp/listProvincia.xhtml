@@ -30,25 +30,27 @@
 				<div class="col-sm-12">
 					<div class="form-group table-responsive box-table-class">
 
+
 						<p:dataTable id="lstProvincia" var="p"
-							value="#{provinciaController.listaProvincia}" paginator="true"
+							value="#{provinciaController.listaProvincias}" paginator="true"
 							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
 							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
-							<p:column headerText="Id" sortBy="#{p.Cprovincia}">
-								<h:outputText value="#{p.Cprovincia}" />
+							<p:column headerText="Id" sortBy="#{p.cprovincia}">
+								<h:outputText value="#{p.cprovincia}" />
 							</p:column>
 
-							<p:column headerText="Provincia" sortBy="#{p.Nprovincia}">
-								<h:outputText value="#{p.Nprovincia}" />
+							<p:column headerText="Provincia" sortBy="#{p.nprovincia}">
+								<h:outputText value="#{p.nprovincia}" />
 							</p:column>
 
 							<p:column headerText="Departamento"
 								sortBy="#{p.departamento.ndepartamento}">
 								<h:outputText value="#{p.departamento.ndepartamento}" />
 							</p:column>
+
 						</p:dataTable>
 					</div>
 

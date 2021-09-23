@@ -12,10 +12,9 @@ import pe.edu.upc.entities.Distrito;
 
 public class Distritoimpl implements IDistritoDao {
 
-	@PersistenceContext(unitName = "demoDepartamento")
+	@PersistenceContext(unitName = "ParteDepartamento")
 	private EntityManager em;
 
-	@Override
 	public void insert(Distrito d) {
 		// TODO Auto-generated method stub
 		try {
@@ -28,7 +27,6 @@ public class Distritoimpl implements IDistritoDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Distrito> list() {
 		// TODO Auto-generated method stub
 

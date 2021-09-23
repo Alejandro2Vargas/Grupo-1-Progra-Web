@@ -17,14 +17,12 @@ public class ProvinciaServiceImpl implements IProvinciaService {
 	@Inject
 	private IProvinciaDao pDao;
 
-	@Override
 	public void insert(Provincia vc) {
 		// TODO Auto-generated method stub
 
 		pDao.insert(vc);
 	}
 
-	@Override
 	public List<Provincia> list() {
 		// TODO Auto-generated method stub
 		return pDao.list();

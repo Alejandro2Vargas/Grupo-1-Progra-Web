@@ -13,11 +13,10 @@ import pe.edu.upc.entities.Departamento;
 
 public class DepartamentoImpl implements IDepartamentoDao {
 
-	@PersistenceContext(unitName = "demoDepartamento")
+	@PersistenceContext(unitName = "ParteDepartamento")
 	private EntityManager em;
 
 	@Transactional
-	@Override
 	public void insert(Departamento d) {
 		// TODO Auto-generated method stub
 
@@ -33,7 +32,6 @@ public class DepartamentoImpl implements IDepartamentoDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Departamento> list() {
 		// TODO Auto-generated method stub
 

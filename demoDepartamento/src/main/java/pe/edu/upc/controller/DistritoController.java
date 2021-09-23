@@ -41,7 +41,7 @@ public class DistritoController {
 
 	public String newDistrito() {
 		this.setDistrito(new Distrito());
-		return "distrito.xhtml";
+		return "Distrito.xhtml";
 	}
 
 	public void insertDistrito() {

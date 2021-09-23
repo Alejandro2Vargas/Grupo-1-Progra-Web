@@ -26,8 +26,8 @@ public class ProvinciaController {
 
 	// atributos
 
-	List<Provincia> listaProvincia;
-	List<Departamento> listaDepartamento;
+	List<Provincia> listaProvincias;
+	List<Departamento> listaDepartamentos;
 
 	private Provincia provincia;
 	private Departamento departamento;
@@ -35,12 +35,12 @@ public class ProvinciaController {
 	// constructor
 	@PostConstruct
 	public void init() {
-		this.listaProvincia = new ArrayList<Provincia>();
-		this.listaDepartamento = new ArrayList<Departamento>();
+		this.listaProvincias = new ArrayList<Provincia>();
+		this.listaDepartamentos = new ArrayList<Departamento>();
 		this.provincia = new Provincia();
 		this.departamento = new Departamento();
-		this.listaDepartamento();
-		this.listaProvincia();
+		this.listDepartamento();
+		this.listProvincia();
 
 	}
 
@@ -50,41 +50,26 @@ public class ProvinciaController {
 
 		this.setProvincia(new Provincia());
 
-		return "provincia.xhtml";
+		return "Provincia.xhtml";
 	}
 
-	public void listaDepartamento() {
+	public void listDepartamento() {
 
-		listaDepartamento = vService.list();
+		listaDepartamentos = vService.list();
 
 	}
 
 	public void insertProvincia() {
 		pService.insert(provincia);
-		this.listaProvincia();
+		this.listProvincia();
 	}
 
-	public void listaProvincia() {
-		listaProvincia = pService.list();
+	public void listProvincia() {
+		listaProvincias = pService.list();
 	}
-
+	
+	
 	// get y set
-	public List<Provincia> getListaProvincia() {
-		return listaProvincia;
-	}
-
-	public void setListaProvincia(List<Provincia> listaProvincia) {
-		this.listaProvincia = listaProvincia;
-	}
-
-	public List<Departamento> getListaDepartamento() {
-		return listaDepartamento;
-	}
-
-	public void setListaDepartamento(List<Departamento> listaDepartamento) {
-		this.listaDepartamento = listaDepartamento;
-	}
-
 	public Provincia getProvincia() {
 		return provincia;
 	}
@@ -101,4 +86,22 @@ public class ProvinciaController {
 		this.departamento = departamento;
 	}
 
+	public List<Provincia> getListaProvincias() {
+		return listaProvincias;
+	}
+
+	public void setListaProvincias(List<Provincia> listaProvincias) {
+		this.listaProvincias = listaProvincias;
+	}
+
+	public List<Departamento> getListaDepartamentos() {
+		return listaDepartamentos;
+	}
+
+	public void setListaDepartamentos(List<Departamento> listaDepartamentos) {
+		this.listaDepartamentos = listaDepartamentos;
+	}
+
+	
+	
 }

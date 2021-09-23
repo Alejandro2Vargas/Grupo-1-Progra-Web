@@ -17,14 +17,12 @@ public class DepartamentoServiceImpl implements IDepartamentoService {
 	@Inject
 	private IDepartamentoDao vDao;
 
-	@Override
 	public void insert(Departamento vc) {
 		// TODO Auto-generated method stub
 
 		vDao.insert(vc);
 	}
 
-	@Override
 	public List<Departamento> list() {
 		// TODO Auto-generated method stub
 		return vDao.list();
